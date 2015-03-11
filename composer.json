@@ -4,6 +4,7 @@
     "description": "Light URL shortener",
     "homepage": "https://github.com/paulfevre/light-url",
     "require": {
+        "symfony/console": "~2.3",
         "silex/silex": "~1.2",
         "twig/twig": "~1.10",
         "symfony/twig-bridge": "~2.3",
