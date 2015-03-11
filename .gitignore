@@ -12,6 +12,10 @@
 /vendor-front/*
 !vendor-front/.gitkeep
 
+# NPM
+/node_modules/*
+!node_modules/.gitkeep
+
 # Var
 /var/cache/*
 !/var/cache/.gitkeep
