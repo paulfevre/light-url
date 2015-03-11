@@ -1,5 +1,6 @@
 
 # Configuration files
+/config/dev.php
 /config/prod.php
 
 # Composer
