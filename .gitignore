@@ -8,6 +8,10 @@
 /vendor/*
 !vendor/.gitkeep
 
+# Bower
+/vendor-front/*
+!vendor-front/.gitkeep
+
 # Var
 /var/cache/*
 !/var/cache/.gitkeep
