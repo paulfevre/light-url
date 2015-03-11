@@ -1,0 +1,11 @@
+/* TEAM */
+	Leader: Paul FEVRE
+	GitHub: paulfevre
+	From: Lille, France
+
+/* THANKS */
+        Site: http://humanstxt.org
+
+/* SITE */
+	Language: French
+	Doctype: HTML5
