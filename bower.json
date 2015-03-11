@@ -1,0 +1,10 @@
+{
+    "name": "paulfevre/light-url",
+    "license": "Apache-2.0",
+    "description": "Light URL shortener",
+    "dependencies": {
+        "jquery": "1.11.*",
+        "bootstrap": "3.3.*",
+        "font-awesome": "4.3.*"
+    }
+}
