@@ -1,4 +1,7 @@
 
+# Configuration files
+/config/prod.php
+
 # Composer
 /composer.lock
 /vendor/*
