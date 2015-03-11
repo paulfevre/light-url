@@ -9,3 +9,15 @@
 !/var/cache/.gitkeep
 /var/log/*
 !/var/log/.gitkeep
+
+# Assets
+/web/css/*
+!/web/css/.gitkeep
+/web/fonts/*
+!/web/fonts/.gitkeep
+/web/ico/*
+!/web/ico/.gitkeep
+/web/img/*
+!/web/img/.gitkeep
+/web/js/*
+!/web/js/.gitkeep
