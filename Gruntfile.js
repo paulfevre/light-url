@@ -53,7 +53,8 @@ module.exports = function (grunt) {
                 files: {
                     'web/js/vendor.min.js': [
                         'vendor-front/jquery/dist/jquery.js',
-                        'vendor-front/bootstrap/dist/js/bootstrap.js'
+                        'vendor-front/bootstrap/dist/js/bootstrap.js',
+                        'vendor-front/jquery-qrcode/jquery.qrcode.min.js'
                     ]
                 }
             }

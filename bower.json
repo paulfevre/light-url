@@ -5,6 +5,7 @@
     "dependencies": {
         "jquery": "~2.1",
         "bootstrap": "~3.3",
-        "font-awesome": "~4.3"
+        "font-awesome": "~4.3",
+        "jquery-qrcode": "master"
     }
 }
