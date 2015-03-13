@@ -33,3 +33,7 @@
 !/web/img/.gitkeep
 /web/js/*
 !/web/js/.gitkeep
+
+# User files
+/web/user/screenshot/*
+!/web/user/screenshot/.gitkeep
