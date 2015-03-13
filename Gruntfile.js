@@ -68,6 +68,7 @@ module.exports = function (grunt) {
             appCSS: {
                 files: {
                     'web/css/app.min.css': [
+                        'resource/private/css/bootstrap-override.css',
                         'resource/private/css/app.css'
                     ]
                 }
