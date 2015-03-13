@@ -27,6 +27,28 @@ module.exports = function (grunt) {
                         dest: 'web/fonts/'
                     }
                 ]
+            },
+            appFiles: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: 'resource/public/fonts/',
+                        src: ['**'],
+                        dest: 'web/fonts/'
+                    },
+                    {
+                        expand: true,
+                        cwd: 'resource/public/ico/',
+                        src: ['**'],
+                        dest: 'web/ico/'
+                    },
+                    {
+                        expand: true,
+                        cwd: 'resource/public/img/',
+                        src: ['**'],
+                        dest: 'web/img/'
+                    }
+                ]
             }
         },
         
@@ -42,6 +64,13 @@ module.exports = function (grunt) {
                         'vendor-front/font-awesome/css/font-awesome.css'
                     ]
                 }
+            },
+            appCSS: {
+                files: {
+                    'web/css/app.min.css': [
+                        'resource/private/css/app.css'
+                    ]
+                }
             }
         },
         
@@ -55,6 +84,13 @@ module.exports = function (grunt) {
                         'vendor-front/jquery/dist/jquery.js',
                         'vendor-front/bootstrap/dist/js/bootstrap.js',
                         'vendor-front/jquery-qrcode/jquery.qrcode.min.js'
+                    ]
+                }
+            },
+            appJS: {
+                files: {
+                    'web/js/app.min.js': [
+                        'resource/private/js/app.js'
                     ]
                 }
             }
