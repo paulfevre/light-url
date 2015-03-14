@@ -3,6 +3,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-watch');
     
     // Project configuration
     grunt.initConfig({
@@ -95,7 +96,22 @@ module.exports = function (grunt) {
                     ]
                 }
             }
+        },
+        
+        /**
+         * Launch tasks on file editing
+         */
+        watch: {
+            css: {
+                files: ['resource/private/css/*.css'],
+                tasks: ['cssmin:appCSS']
+            },
+            javascript: {
+                files: ['resource/private/js/*.js'],
+                tasks: ['uglify:appJS']
+            }
         }
+        
     });
     
     // Tasks
