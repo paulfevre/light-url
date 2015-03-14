@@ -2,7 +2,7 @@
 
 $app->get('/', function() use ($app) {
     return $app['twig']->render('index.html.twig');
-})->bind('index');
+})->bind('home');
 
 $app->get('/{alias}', function($alias) use ($app) {
     $url = $app['db']->fetchColumn('SELECT `url` FROM `url` WHERE `alias` = ?', array($alias));
