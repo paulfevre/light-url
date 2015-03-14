@@ -36,6 +36,9 @@
 
 {% block body %}
     {{ parent() }}
+    
+    {% include 'layout/navbar.html.twig' %}
+    
     {% block content %}
     {% endblock %}
 {% endblock %}

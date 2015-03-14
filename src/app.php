@@ -1,8 +1,9 @@
 <?php
 
+use Silex\Provider\DoctrineServiceProvider;
 use Silex\Provider\MonologServiceProvider;
 use Silex\Provider\TwigServiceProvider;
-use Silex\Provider\DoctrineServiceProvider;
+use Silex\Provider\UrlGeneratorServiceProvider;
 
 $app->register(new MonologServiceProvider(), array(
     'monolog.logfile' => __DIR__ . './../var/log/app.log',
@@ -15,3 +16,5 @@ $app->register(new TwigServiceProvider(), array(
 ));
 
 $app->register(new DoctrineServiceProvider());
+
+$app->register(new UrlGeneratorServiceProvider());
