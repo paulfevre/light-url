@@ -1,10 +1,10 @@
 <?php
 
-// Doctrine
-$app['db.options'] = array(
-    'driver' => 'pdo_mysql',
-    'host' => 'localhost',
-    'dbname' => 'light-url',
-    'user' => 'root',
-    'password' => '',
-);
+// Include prod configuration
+require __DIR__.'/prod.php';
+
+// Google Analytics undesired in "dev" mode.
+$app['analytics.user'] = null;
+
+// Debug mode
+$app['debug'] = true;

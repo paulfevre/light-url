@@ -8,3 +8,7 @@ $app['db.options'] = array(
     'user' => 'root',
     'password' => '',
 );
+
+// Google Analytics
+// Enter your Google Analytics User-ID to active (UA-XXXXXXXX-X).
+$app['analytics.user'] = null;
