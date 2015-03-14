@@ -5,5 +5,15 @@ $app->get('/', function() use ($app) {
 })->bind('index');
 
 $app->get('/{alias}', function($alias) use ($app) {
-    return $app['twig']->render('redirect.html.twig', array('alias' => $alias));
+    $url = $app['db']->fetchColumn('SELECT `url` FROM `url` WHERE `alias` = ?', array($alias));
+    $params = array(
+        'alias' => $alias,
+        'url' => $url,
+    );
+    
+    if ($url != null) {
+        return $app['twig']->render('redirect.html.twig', $params);
+    } else {
+        return $app['twig']->render('index.html.twig');
+    }
 })->bind('redirect');
