@@ -1,18 +1,23 @@
 <?php
 
-$app->get('/', function() use ($app) {
-    return $app['twig']->render('index.html.twig');
+$paramsGlobal = array(
+    'analyticsUser' => $app['analytics.user']
+);
+
+$app->get('/', function() use ($app, $paramsGlobal) {
+    $params = $paramsGlobal;
+    return $app['twig']->render('index.html.twig', $params);
 })->bind('home');
 
-$app->get('/{alias}', function($alias) use ($app) {
+$app->get('/{alias}', function($alias) use ($app, $paramsGlobal) {
+    $params = $paramsGlobal;
+    
     // Request GET passthrough
-    $params = array(
-        'alias' => $alias
-    );
-    
-    $params['analyticsUser'] = $app['analytics.user'];
+    $params['alias'] = $alias;
+
+    // Get data from DB
     $params['url'] = $app['db']->fetchColumn('SELECT `url` FROM `url` WHERE `alias` = ?', array($alias));
-    
+
     // Does screenshot file exists
     $params['screenshotExists'] = false;
     if (is_file(__DIR__ . '/../web/user/screenshot/' . $alias . '.png')) {
