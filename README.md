@@ -2,7 +2,7 @@
 
 A light URL shortener, designed for private usage on your own server.
 
-[![SensioLabsInsight](https://insight.sensiolabs.com/projects/00209df0-7ff4-4e58-a95a-3940b2c824bb/big.png)](https://insight.sensiolabs.com/projects/00209df0-7ff4-4e58-a95a-3940b2c824bb)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/adb0f567-11b4-4ca4-b8b0-70f984e263b4/big.png)](https://insight.sensiolabs.com/projects/adb0f567-11b4-4ca4-b8b0-70f984e263b4)
 
 [![Dependency Status](https://gemnasium.com/paulfevre/light-url.svg)](https://gemnasium.com/paulfevre/light-url)
 
@@ -10,7 +10,17 @@ A light URL shortener, designed for private usage on your own server.
 # Requirements
 
 - Composer
-- Node.js
+- node.js
 - NPM
 - Bower
 - Grunt
+
+
+# Versioning
+
+Semantic versioning ([semver](http://semver.org/)) is applied to this project.
+
+
+# License
+
+This software is under the Apache-2.0 license. For full copyright and license information, please view the LICENSE file included.
