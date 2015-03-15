@@ -1,6 +1,33 @@
 {% extends "layout.html.twig" %}
 
+{% set exampleAlias = 'http://light.url/AaBb12' %}
+{% set exampleUrl = 'https://www.my-domain.com/shop/article/1234/awesome-article-with-very-long-name/' %}
+
 {% block content %}
-    {{ parent() }}
-    <i class="fa fa-home"></i> Hello World!
+    <div class="container">
+
+        <div class="jumbotron">
+            <h1>Light URL</h1>
+            <h2>An URL shortener to create your own web shortcuts</h2>
+            <hr />
+
+            <p>
+                For example:
+            </p>
+            <ul>
+                <li><strong>Original URL:</strong> <a href="#">{{ exampleAlias }}</a></li>
+                <li><strong>Light URL:</strong> <a href="#">{{ exampleUrl }}</a></li>
+            </ul>
+            <p>
+                Special features:
+            </p>
+            <ul>
+                <li>Use a personalized alias</li>
+                <li>Target URL preview to protect from unwanted redirection</li>
+                <li>Target link screenshot</li>
+                <li>QR code generation</li>
+            </ul>
+        </div>
+
+    </div>
 {% endblock %}
