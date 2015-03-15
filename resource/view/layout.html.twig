@@ -2,15 +2,15 @@
 
 {% block stylesheets %}
     {{ parent() }}
-    <link rel="stylesheet" type="text/css" href="css/vendor.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/app.min.css" />
+    <link rel="stylesheet" type="text/css" href="{{ app.request.basepath }}/css/vendor.min.css" />
+    <link rel="stylesheet" type="text/css" href="{{ app.request.basepath }}/css/app.min.css" />
 {% endblock %}
 
 {% block javascripts %}
     {{ parent() }}
-    <script src="js/vendor.min.js"></script>
-    <script src="js/app.min.js"></script>
-    
+    <script src="{{ app.request.basepath }}/js/vendor.min.js"></script>
+    <script src="{{ app.request.basepath }}/js/app.min.js"></script>
+
     {# Google Analytics #}
     {% if analyticsUser %}
         <script>
@@ -28,7 +28,7 @@
 
             ga('create', '{{ analyticsUser }}', 'auto');
             ga('send', 'pageview');
-            
+
             console.log('created: {{ analyticsUser }}');
         </script>
     {% endif %}
@@ -36,9 +36,9 @@
 
 {% block body %}
     {{ parent() }}
-    
+
     {% include 'layout/navbar.html.twig' %}
-    
+
     {% block content %}
     {% endblock %}
 {% endblock %}
