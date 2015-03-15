@@ -5,14 +5,21 @@ $app->get('/', function() use ($app) {
 })->bind('home');
 
 $app->get('/{alias}', function($alias) use ($app) {
-    $url = $app['db']->fetchColumn('SELECT `url` FROM `url` WHERE `alias` = ?', array($alias));
+    // Request GET passthrough
     $params = array(
-        'analyticsUser' => $app['analytics.user'],
-        'alias' => $alias,
-        'url' => $url,
+        'alias' => $alias
     );
+    
+    $params['analyticsUser'] = $app['analytics.user'];
+    $params['url'] = $app['db']->fetchColumn('SELECT `url` FROM `url` WHERE `alias` = ?', array($alias));
+    
+    // Does screenshot file exists
+    $params['screenshotExists'] = false;
+    if (is_file(__DIR__ . '/../web/user/screenshot/' . $alias . '.png')) {
+        $params['screenshotExists'] = true;
+    }
 
-    if ($url != null) {
+    if ($params['url'] != null) {
         return $app['twig']->render('redirect.html.twig', $params);
     } else {
         return $app['twig']->render('index.html.twig');

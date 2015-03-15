@@ -5,6 +5,7 @@ LightURL.Redirection = (typeof LightURL.Redirection === 'object') ? LightURL.Red
 LightURL.Redirection = function()
 {
     // Parameters
+    this.alias = null;
     this.url = null;
     this.timeTotal = 10;
     this.timeLeft = 10;
@@ -13,6 +14,7 @@ LightURL.Redirection = function()
     // HTML selectors
     this.progressBar = '#progressBar > .progress-bar';
     this.buttonStop = '#buttonStop';
+    this.qrCode = '#qrCode';
 };
 
 LightURL.Redirection.prototype = {
@@ -51,5 +53,15 @@ LightURL.Redirection.prototype = {
                 .removeClass('active')
                 .addClass('progress-bar-disable');
         jQuery(this.buttonStop).remove();
+    },
+    /**
+     * Generate QR code
+     * @param {type} url    URL to be encoded
+     */
+    generateQR: function(url)
+    {
+        if (this.alias !== null) {
+            jQuery(this.qrCode).qrcode(url);
+        }
     }
 };
