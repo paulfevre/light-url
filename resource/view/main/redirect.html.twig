@@ -1,12 +1,17 @@
 {% extends "layout.html.twig" %}
 
+{# Set permalink using page URI, a generated one should be stronger. #}
+{% set permalink = app.request.uri %}
+
 {% block javascripts %}
     {{ parent() }}
     <script>
         jQuery(document).ready(function() {
             var myRedirection = new LightURL.Redirection;
+            myRedirection.alias = '{{ alias }}';
             myRedirection.url = '{{ url }}';
             myRedirection.start();
+            myRedirection.generateQR('{{ permalink }}');
         });
     </script>
 {% endblock %}
@@ -26,6 +31,29 @@
             <div class="text-right">
                 <a class="btn btn-default btn-lg" id="buttonStop" href="javascript:void(0);" role="button">Stop (<span class="timer">10</span> sec)</a>
                 <a class="btn btn-primary btn-lg" href="{{ url }}" role="button">Go now!</a>
+            </div>
+        </div>
+
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>Informations</h3>
+                        <strong>Light URL:</strong> <a href="{{ permalink }}">{{ permalink }}</a><br />
+                        <strong>Target URL:</strong> <a href="{{ url }}">{{ url }}</a><br />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8">
+                    <h3>Screenshot</h3>
+                    <img class="screenshot" src="{% if screenshotExists %}user/screenshot/{{ alias }}.png{% endif %}" />
+                </div>
+                <div class="col-sm-4">
+                    <h3>QR Code</h3>
+                    <div id="qrCode"></div>
+                    <div>
+                        This QR code is generated using light URL to keep it simple.
+                    </div>
+                </div>
             </div>
         </div>
 
