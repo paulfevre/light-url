@@ -38,14 +38,14 @@
             <div class="row">
                 <div class="col-sm-12">
                     <h3>Informations</h3>
-                        <strong>Light URL:</strong> <a href="{{ permalink }}">{{ permalink }}</a><br />
-                        <strong>Target URL:</strong> <a href="{{ url }}">{{ url }}</a><br />
+                    <strong>Light URL:</strong> <a href="{{ permalink }}">{{ permalink }}</a><br />
+                    <strong>Target URL:</strong> <a href="{{ url }}">{{ url }}</a><br />
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-8">
                     <h3>Screenshot</h3>
-                    <img class="screenshot" src="{% if screenshotExists %}user/screenshot/{{ alias }}.png{% endif %}" />
+                    <img class="screenshot" src="{% if screenshotExists %}{{ app.request.basepath }}/user/screenshot/{{ alias }}.png{% endif %}" />
                 </div>
                 <div class="col-sm-4">
                     <h3>QR Code</h3>
