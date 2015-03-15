@@ -19,7 +19,7 @@ $app->get('/{alias}', function($alias) use ($app) {
         $params['screenshotExists'] = true;
     }
 
-    if ($params['url'] != null) {
+    if ($params['url'] !== false) {
         return $app['twig']->render('redirect.html.twig', $params);
     } else {
         return $app['twig']->render('index.html.twig');
