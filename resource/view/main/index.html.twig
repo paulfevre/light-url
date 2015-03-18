@@ -1,5 +1,11 @@
 {% extends "layout.html.twig" %}
 
+{% block title %}{{ parent() }}{% endblock %}
+{% block ogTitle %}{{ parent() }}{% endblock %}
+{% block ogDescription %}{{ parent() }}{% endblock %}
+{% block ogUrl %}{{ parent() }}{% endblock %}
+{% block ogImage %}{{ parent() }}{% endblock %}
+
 {% set exampleAlias = 'http://light.url/AaBb12' %}
 {% set exampleUrl = 'https://www.my-domain.com/shop/article/1234/awesome-article-with-very-long-name/' %}
 
