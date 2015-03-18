@@ -1,8 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html prefix="og: http://ogp.me/ns#">
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Light URL{% endblock %}</title>
+        <meta name="description" content="{% block meta_description %}Light URL shortener, to create web shortcuts{% endblock %}" />
+        
+        {# Open Graph protocol #}
+        <meta property="og:title" content="{% block ogTitle %}Light URL{% endblock %}" />
+        <meta property="og:description" content="{% block ogDescription %}Light URL shortener, to create web shortcuts{% endblock %}" />
+        <meta property="og:url" content="{% block ogUrl %}http://{% endblock %}" />
+        {# Recommended image sizes: 320x320, 320x200, 200x320, 480x250 #}
+        <meta property="og:image" content="{% block ogImageSquare %}http://{% endblock %}" />
+        <meta property="og:image" content="{% block ogImageLandscape %}http://{% endblock %}" />
+        <meta property="og:image" content="{% block ogImagePortrait %}http://{% endblock %}" />
+        <meta property="og:image" content="{% block ogImageLarge %}http://{% endblock %}" />
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/x-icon" href="{{ app.request.basepath }}/favicon.ico" />
         {% block meta %}
         {% endblock %}

@@ -1,5 +1,11 @@
 {% extends "layout.html.twig" %}
 
+{% block title %}{{ parent() }}{% endblock %}
+{% block ogTitle %}{{ parent() }}{% endblock %}
+{% block ogDescription %}{{ parent() }}{% endblock %}
+{% block ogUrl %}{{ parent() }}{% endblock %}
+{% block ogImage %}{{ parent() }}{% endblock %}
+
 {# Set permalink using page URI, a generated one should be stronger. #}
 {% set permalink = app.request.uri %}
 
