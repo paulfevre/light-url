@@ -9,11 +9,42 @@ A light URL shortener, designed for private usage on your own server.
 
 # Requirements
 
-- Composer
-- node.js
-- NPM
 - Bower
-- Grunt
+- Composer
+- NPM
+
+
+# Install
+
+Install Bower dependencies
+```
+$ bower install
+```
+
+Install Composer dependencies
+```
+$ composer install
+```
+
+Install NPM dependencies
+```
+$ npm install
+```
+
+Install Grunt
+```
+$ npm install -g grunt-cli
+```
+
+Process assets using Grunt
+```
+$ grunt
+```
+
+Automatic processing of modified assets
+```
+$ grunt watch
+```
 
 
 # Versioning
