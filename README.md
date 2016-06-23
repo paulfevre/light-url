@@ -54,4 +54,4 @@ Semantic versioning ([semver](http://semver.org/)) is applied to this project.
 
 # License
 
-This software is under the Apache-2.0 license. For full copyright and license information, please view the LICENSE file included.
+This software is under the GNU GENERAL PUBLIC LICENSE Version 3. For full copyright and license information, please view the LICENSE file included.
