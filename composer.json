@@ -11,10 +11,5 @@
         "monolog/monolog": "~1.13",
         "symfony/monolog-bridge": "~2.5",
         "doctrine/dbal": "~2.4"
-    },
-    "autoload": {
-        "psr-0": {
-            "": "src/"
-        }
     }
 }
